@@ -1,10 +1,7 @@
 package moodAnalyser;
 
 public class MoodException extends Exception {
-    MoodEnumData.EnumExceptionType type;
-
-    public MoodException(MoodEnumData.EnumExceptionType type, String message) {
+    public MoodException(String message, Exception e) {
         super(message);
-        this.type = type;
     }
 }
