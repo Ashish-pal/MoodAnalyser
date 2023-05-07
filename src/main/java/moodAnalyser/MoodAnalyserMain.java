@@ -9,6 +9,9 @@ public class MoodAnalyserMain {
 
     public String analyseMood() throws MoodException {
         try {
+            if (message == null || message.isEmpty()) {
+                throw new MoodException("Enter Proper Message , Empty Not Allowed");
+            }
             if (message.contains("happy")) {
                 return "Happy";
             } else if (message.contains("sad")) {

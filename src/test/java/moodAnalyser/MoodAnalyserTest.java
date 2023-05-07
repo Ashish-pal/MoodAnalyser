@@ -19,9 +19,21 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void MoodWithUnknownMessage() throws MoodException {
+    public void MoodWithUnknownMessageTest() throws MoodException {
         MoodAnalyserMain analyser = new MoodAnalyserMain("I am feeling okay");
         String mood = analyser.analyseMood();
         Assert.assertEquals("Unknown", mood);
+    }
+
+    @Test
+    public void MoodWithNullMessageTest() throws MoodException {
+        MoodAnalyserMain analyser = new MoodAnalyserMain(null);
+        analyser.analyseMood();
+    }
+
+    @Test
+    public void MoodWithEmptyMessageTest() throws MoodException {
+        MoodAnalyserMain analyser = new MoodAnalyserMain("");
+        analyser.analyseMood();
     }
 }
