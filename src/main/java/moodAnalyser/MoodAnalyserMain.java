@@ -17,7 +17,7 @@ public class MoodAnalyserMain {
         }
     }
     public static void main(String[] args) {
-        MoodAnalyserMain analyser = new MoodAnalyserMain("I am happy today.");
+        MoodAnalyserMain analyser = new MoodAnalyserMain("I am Any today.");
         String mood = analyser.analyseMood();
         System.out.println("Mood: " + mood);
     }
